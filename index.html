@@ -21,7 +21,7 @@
   <body>
     <header>
       <img class="logo" src="media/autena logo.svg" alt="Autena logo" />
-      <ul class="section-links hide-element">
+      <ul class="section-links hide-element flex-box-column">
         <li><a href="#">Pagrindinis</a></li>
         <li><a href="#">Apie mus</a></li>
         <li><a href="#">Produktai</a></li>
@@ -42,31 +42,31 @@
         <i class="fa-solid fa-bars hamburger-icon"></i>
       </div>
     </header>
-    <section class="hero-section">
+    <section class="hero-section flex-box-column">
+      <div class="img-cover"></div>
       <h1>PASIRŪPINK SAVO AUTOMOBILIU!</h1>
       <p>
         Parduotuvėje Autena rasite visko ko reikia jūsų <b>automobiliui</b>, jo
         priežiūrai ir dar daugiau!
       </p>
-      <button>Kontaktai</button>
+      <button>Susisiekite</button>
     </section>
-    <section class="about-us-section">
+    <section class="about-us-section flex-box-column">
       <h1>APIE <b>MUS</b></h1>
-      <div class="flex-container">
-        <img src="media/aboutUs.jpg" alt="parduotuvės darbuotojai" />
+      <div class="flex-container flex-box-column">
+        <div class="img-container">
+          <img src="media/aboutUs.jpg" alt="parduotuvės darbuotojai" />
+          <div class="img-border"></div>
+        </div>
         <div class="text-container">
           <h2>SUSIPAŽINKIME</h2>
           <p>Daugiau nei <b>10metų</b> padedame jūsų automobiliams.</p>
           <p>
             Esame įsikūrę Utenos miesto centre <b>J. Basanavičiaus g. 75</b>
-          </p>
-          <p>
             Skirtingai nuo didelių didmenininkų, mes galime taikyti lanksčią
-            prekių kainodarą.
-          </p>
-          <p>
-            Mūsų darbuotojai visada linkę jums padėti, išanalizavę problemą,
-            pateikti geriausią sprendimą paremtą patirtimi.
+            prekių kainodarą. Mūsų darbuotojai visada linkę jums padėti,
+            išanalizavę problemą, pateikti geriausią sprendimą paremtą
+            patirtimi.
           </p>
           <a href="#">Skaityti daugiau...</a>
         </div>
@@ -76,7 +76,7 @@
       <h1>PRODUKTŲ KATEGORIJOS</h1>
 
       <div class="grid-container">
-        <div class="category-container">
+        <div class="category-container flex-box-column">
           <i class="fa-solid fa-tools"></i>
           <h3>Autodalys ir aksesuarai</h3>
           <p>
@@ -85,7 +85,7 @@
           </p>
         </div>
 
-        <div class="category-container">
+        <div class="category-container flex-box-column">
           <i class="fa-solid fa-bolt"></i>
           <h3>Akumuliatoriai ir automobilio elektronika</h3>
           <p>
@@ -94,7 +94,7 @@
           </p>
         </div>
 
-        <div class="category-container">
+        <div class="category-container flex-box-column">
           <i class="fa-solid fa-wrench"></i>
           <h3>Kėbulo ir remonto medžiagos</h3>
           <p>
@@ -103,7 +103,7 @@
           </p>
         </div>
 
-        <div class="category-container">
+        <div class="category-container flex-box-column">
           <i class="fa-solid fa-oil-can"></i>
           <h3>Tepalai ir filtrai</h3>
           <p>
@@ -112,7 +112,7 @@
           </p>
         </div>
 
-        <div class="category-container">
+        <div class="category-container flex-box-column">
           <i class="fa-solid fa-spray-can"></i>
           <h3>Autokosmetika ir kvapai</h3>
           <p>
@@ -121,7 +121,7 @@
           </p>
         </div>
 
-        <div class="category-container">
+        <div class="category-container flex-box-column">
           <i class="fa-solid fa-chair"></i>
           <h3>Salono aksesuarai</h3>
           <p>
@@ -131,38 +131,40 @@
         </div>
       </div>
     </section>
-    <section class="social-activity-section">
+    <section class="social-activity-section flex-box-column">
       <h1>VISUOMENINĖ VEIKLA</h1>
-      <div class="flex-container">
-        <div class="img-container">
-          <img
-            src="https://i.ytimg.com/vi/JGTxLIO33VU/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGEMgUShlMA8=&rs=AOn4CLAibbPxeA-5R8mDnzHYNRUno_Lmrwhttps://i.ytimg.com/vi/JGTxLIO33VU/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGEMgUShlMA8=&rs=AOn4CLAibbPxeA-5R8mDnzHYNRUno_Lmrw"
-            alt=""
-          />
-          <div class="photo-filter"></div>
+      <div class="activity-container">
+        <div class="flex-container">
+          <div class="img-container">
+            <img
+              src="https://i.ytimg.com/vi/JGTxLIO33VU/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGEMgUShlMA8=&rs=AOn4CLAibbPxeA-5R8mDnzHYNRUno_Lmrwhttps://i.ytimg.com/vi/JGTxLIO33VU/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGEMgUShlMA8=&rs=AOn4CLAibbPxeA-5R8mDnzHYNRUno_Lmrw"
+              alt=""
+            />
+            <div class="photo-filter"></div>
+          </div>
+          <h3>Mokinių iniciatyvos "ŠGMA" finansinė parama</h3>
+          <p>
+            Autodalių parduotuvė „Autena“ didžiuojasi būdama ilgamečiu Šapokos
+            gimnazijos muzikinių apdovanojimų – ŠGMA – rėmėja. Šis kasmetinis
+            renginys suteikia unikalią platformą talentingiems gimnazijos
+            mokiniams pasirodyti, įvertinti jų muzikinius sugebėjimus ir skatina
+            kūrybiškumo ugdymą.
+          </p>
         </div>
-        <h3>Mokinių iniciatyvos "ŠGMA" finansinė parama</h3>
-        <p>
-          Autodalių parduotuvė „Autena“ didžiuojasi būdama ilgamečiu Šapokos
-          gimnazijos muzikinių apdovanojimų – ŠGMA – rėmėja. Šis kasmetinis
-          renginys suteikia unikalią platformą talentingiems gimnazijos
-          mokiniams pasirodyti, įvertinti jų muzikinius sugebėjimus ir skatina
-          kūrybiškumo ugdymą.
-        </p>
-      </div>
-      <div class="flex-container">
-        <div class="img-container">
-          <img src="/media/rally.jpg" alt="" />
-          <div class="photo-filter"></div>
+        <div class="flex-container">
+          <div class="img-container">
+            <img src="/media/rally.jpg" alt="" />
+            <div class="photo-filter"></div>
+          </div>
+          <h3>SAMSONO RALIS</h3>
+          <p>
+            Autodalių parduotuvė „Autena“ didžiuojasi galėdama prisidėti prie
+            automobilių sporto ir būti „Samsonas“ ralio lenktynininko finansine
+            rėmėja. Šis Utenoje vykstantis renginys suburia automobilių sporto
+            entuziastus, skatina vietinę bendruomenę palaikyti sportininkus ir
+            garsina mūsų regioną.
+          </p>
         </div>
-        <h3>SAMSONO RALIS</h3>
-        <p>
-          Autodalių parduotuvė „Autena“ didžiuojasi galėdama prisidėti prie
-          automobilių sporto ir būti „Samsonas“ ralio lenktynininko finansine
-          rėmėja. Šis Utenoje vykstantis renginys suburia automobilių sporto
-          entuziastus, skatina vietinę bendruomenę palaikyti sportininkus ir
-          garsina mūsų regioną.
-        </p>
       </div>
     </section>
 

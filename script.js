@@ -15,6 +15,8 @@
 const hamburgerMenuIcon = document.querySelector(".hamburger-icon");
 const mobileMenu = document.querySelector(".section-links");
 
-hamburgerMenuIcon.addEventListener("click", function (e) {
+hamburgerMenuIcon.addEventListener("click", function () {
   mobileMenu.classList.toggle("hide-element");
+  hamburgerMenuIcon.classList.toggle("fa-bars");
+  hamburgerMenuIcon.classList.toggle("fa-xmark");
 });

@@ -31,7 +31,8 @@
 
   /* fonts  */
   --headingFont: "Poppins", sans-serif;
-  --bodyFont: "Lato", sans-serif;
+  /* changes insted of Lato because of LT support issues */
+  --bodyFont: "Poppins", sans-serif;
   --smallText: 0.7em;
   --fontColor: var(--black);
   --fontWhite: var(--grey-lightest);
@@ -92,6 +93,13 @@ p {
   display: none !important;
 }
 
+.flex-box-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 /* HEADER */
 header {
   display: flex;
@@ -105,16 +113,18 @@ header > .logo {
   height: 4.2rem;
 }
 
+header > .logo:hover {
+  animation: wobble 0.7s ease;
+  transition: transform 0.2s ease;
+}
+
 .section-links {
   position: fixed;
   inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 6rem;
   list-style: none;
   background-color: var(--yellow-darker);
+  z-index: 998;
 }
 
 .section-links a {
@@ -132,7 +142,8 @@ header > .logo {
   border-radius: 0.8rem;
 }
 
-.section-links a:hover {
+.section-links a:hover,
+.social-links i:hover {
   text-shadow: -1px 3px 5px rgba(0, 0, 0, 0.51);
   color: #000;
 }
@@ -147,7 +158,7 @@ header > .logo {
 }
 
 .social-links i {
-  color: var(--primary-shade80);
+  color: var(--primary-shade60);
 }
 
 header .hamburger-icon {
@@ -156,6 +167,7 @@ header .hamburger-icon {
   right: 2.4rem;
   font-size: 3.6rem;
   color: #2d1211d3;
+  z-index: 999;
 }
 
 .header-right {
@@ -167,11 +179,7 @@ header .hamburger-icon {
 /* HERO */
 .hero-section {
   background-color: var(--yellow-darker);
-  display: flex;
-  flex-direction: column;
   gap: 2.4rem;
-  align-items: center;
-  justify-content: center;
   height: calc(100vh - 90px);
 }
 
@@ -207,11 +215,9 @@ header .hamburger-icon {
 
 /* ABOUT US SECTION */
 .about-us-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   margin: 6.4rem 0;
   width: 100%;
+  padding: 0 10%;
 }
 
 .about-us-section > h1 {
@@ -227,11 +233,7 @@ header .hamburger-icon {
 }
 
 .about-us-section .flex-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-width: 80%;
+  max-width: 100%;
 }
 
 .about-us-section .flex-container h2 {
@@ -244,6 +246,7 @@ header .hamburger-icon {
 
 .about-us-section .flex-container p {
   line-height: 1.5;
+  text-align: justify;
 }
 
 .about-us-section .flex-container a {
@@ -275,10 +278,7 @@ header .hamburger-icon {
 
 /* perdaryti į gridą, kad lengviau būtų desktop daryt */
 .our-products-section .category-container {
-  display: flex;
-  flex-direction: column;
   justify-content: start;
-  align-items: center;
   gap: 1.2rem;
   width: 21rem;
 }
@@ -298,17 +298,19 @@ header .hamburger-icon {
 }
 
 .category-container p {
-  line-height: 2;
+  line-height: 1.5;
   text-align: center;
+  font-size: 1.8rem;
 }
 
 /* SOCIAL ACTIVITY SECTION */
-.social-activity-section {
+
+.activity-container {
   padding: 0 10%;
+  padding-bottom: 6.2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding-bottom: 6.2rem;
+  gap: 3rem;
 }
 
 .social-activity-section .flex-container {
@@ -537,6 +539,7 @@ footer a:hover {
   color: var(--fontWhite);
   font-family: var(--bodyFont);
   display: block;
+  font-size: 1.8rem;
 }
 
 .other-info p {
@@ -564,12 +567,157 @@ footer .copyright {
   html {
     font-size: 40%;
   }
-
-
+}
 
 @media screen AND (max-width: 400px) {
   html {
     font-size: 30%;
+  }
+}
+
+@media screen AND (min-width: 700px) {
+  header .section-links {
+    position: static;
+    display: flex !important;
+    flex-direction: row;
+    gap: 0.8rem;
+    background-color: transparent;
+  }
+  .section-links a {
+    color: var(--black);
+    font-size: 1.6rem;
+    white-space: nowrap;
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  .header-right {
+    display: none;
+  }
+
+  header {
+    padding-right: 2.4rem;
+  }
+
+  header .contacts {
+    color: white;
+  }
+
+  /* HERO */
+  .hero-section {
+    gap: 0.8rem;
+    background-image: url("media/IMG-1596-2-1536x1152.jpg");
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+  }
+
+  .img-cover {
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(255, 179, 0, 0.63),
+      rgba(0, 0, 0, 0.6)
+    );
+    z-index: 1;
+  }
+
+  .hero-section h1 {
+    margin: 0.8rem;
+    font-size: 2.4rem;
+    z-index: 2;
+  }
+
+  .hero-section p {
+    z-index: 2;
+  }
+
+  .hero-section button {
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.251);
+  }
+
+  .hero-section button:hover {
+    background-color: rgba(0, 0, 0, 0.541);
+  }
+
+  /* ABOUT US */
+  .about-us-section {
+    /* padding: ; */
+  }
+
+  .about-us-section h1 {
+    font-size: 3rem;
+    margin-top: 0;
+    margin-bottom: 4.2rem;
+  }
+
+  .about-us-section .flex-container {
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .about-us-section img {
+    position: relative;
+    max-width: 37rem;
+  }
+
+  .about-us-section .text-container {
+    max-width: 41rem;
+  }
+
+  .about-us-section .img-border::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border: var(--yellow-darker) solid 4px;
+    border-radius: 2px;
+    transform: translate(-12px, -12px);
+    z-index: -1;
+  }
+
+  .about-us-section .text-container h2 {
+    margin-bottom: 2.4rem;
+    margin-top: 0;
+  }
+
+  .about-us-section p,
+  .about-us-section .text-container a {
+    font-size: 1.2rem;
+  }
+
+  /* SOCIAL ACTIVITY */
+  .activity-container {
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  /* PRODUCTS */
+  .our-products-section .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ANIMATIONS */
+@keyframes wobble {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(-5deg);
+  }
+  75% {
+    transform: rotate(3deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 
