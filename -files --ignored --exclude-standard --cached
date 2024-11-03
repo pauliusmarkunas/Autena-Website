@@ -1,0 +1,17 @@
+[33mcommit 84581e4800064da0c0c88cf88fbd3a63e9959621[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m)[m
+Author: Paulius Markūnas <pauliusmarkunas@gmail.com>
+Date:   Sun Nov 3 21:16:34 2024 +0200
+
+    removed unrelated codument
+
+[33mcommit e43a5ef5fbc012f7707f8f27bf3ec77049a05a18[m
+Author: Paulius Markūnas <pauliusmarkunas@gmail.com>
+Date:   Sun Nov 3 21:09:55 2024 +0200
+
+    final autena website design
+
+[33mcommit 45d0d3d0a7ea6add6a11427d92315a3b0337bac4[m
+Author: Paulius Markūnas <pauliusmarkunas@gmail.com>
+Date:   Fri Nov 1 01:24:14 2024 +0200
+
+    initial commit, mobile-first design
