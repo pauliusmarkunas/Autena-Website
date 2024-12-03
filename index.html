@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Autena</title>
+    <link rel="icon" href="media/autena logo.svg" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -19,15 +20,17 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
+    <header class="flex-space-between">
       <img class="logo" src="media/autena logo.svg" alt="Autena logo" />
-      <ul class="section-links hide-element flex-box-column">
-        <li><a href="#">Pagrindinis</a></li>
-        <li><a href="#">Apie mus</a></li>
-        <li><a href="#">Produktai</a></li>
-        <li><a href="#">Akcijos</a></li>
-        <li><a class="contacts" href="#">Kontaktai</a></li>
-      </ul>
+      <nav>
+        <ul class="section-links hide-element flex-column-center">
+          <li><a href="#">Pagrindinis</a></li>
+          <li><a href="#">Apie mus</a></li>
+          <li><a href="#">Produktai</a></li>
+          <li><a href="#">Akcijos</a></li>
+          <li><a class="contacts" href="#">Kontaktai</a></li>
+        </ul>
+      </nav>
       <div class="header-right">
         <ul class="social-links">
           <li>
@@ -42,135 +45,90 @@
         <i class="fa-solid fa-bars hamburger-icon"></i>
       </div>
     </header>
-    <section class="hero-section flex-box-column">
-      <div class="img-cover"></div>
-      <h1>PASIRŪPINK SAVO AUTOMOBILIU!</h1>
-      <p>
-        Parduotuvėje Autena rasite visko ko reikia jūsų <b>automobiliui</b>, jo
-        priežiūrai ir dar daugiau!
-      </p>
-      <button>Susisiekite</button>
-    </section>
-    <section class="about-us-section flex-box-column">
-      <h1>APIE <b>MUS</b></h1>
-      <div class="flex-container flex-box-column">
-        <div class="img-container">
-          <img src="media/aboutUs.jpg" alt="parduotuvės darbuotojai" />
-          <div class="img-border"></div>
-        </div>
-        <div class="text-container">
-          <h2>SUSIPAŽINKIME</h2>
-          <p>Daugiau nei <b>10metų</b> padedame jūsų automobiliams.</p>
+    <!-- HEADER ENDS HERE ------------------------------------------------------- -->
+    <main class="section-contacts section-wp flex-column-center">
+      <div class="primary-info-container flex-column-center">
+        <div class="contact-us flex-column-center">
+          <h1>Susisiekite su mumis!</h1>
           <p>
-            Esame įsikūrę Utenos miesto centre <b>J. Basanavičiaus g. 75</b>
-            Skirtingai nuo didelių didmenininkų, mes galime taikyti lanksčią
-            prekių kainodarą. Mūsų darbuotojai visada linkę jums padėti,
-            išanalizavę problemą, pateikti geriausią sprendimą paremtą
-            patirtimi.
-          </p>
-          <a href="#">Skaityti daugiau...</a>
-        </div>
-      </div>
-    </section>
-    <section id="our-products-section" class="our-products-section">
-      <h1>PRODUKTŲ KATEGORIJOS</h1>
-
-      <div class="grid-container">
-        <div class="category-container flex-box-column">
-          <i class="fa-solid fa-tools"></i>
-          <h3>Autodalys ir aksesuarai</h3>
-          <p>
-            Čia rasite viską – nuo smulkių tvirtinimo detalių iki variklio,
-            stabdžių, pakabos, degalų, išmetimo sistemos detalių
+            Jeigu turite klausimų apie mūsų produktus ar paslaugas, prašome
+            susisiekti užpildžius žemiau pateiktą formą, telefonu arba el.
+            paštu.
           </p>
         </div>
-
-        <div class="category-container flex-box-column">
-          <i class="fa-solid fa-bolt"></i>
-          <h3>Akumuliatoriai ir automobilio elektronika</h3>
-          <p>
-            Platus kokybiškų akumuliatorių pasirinkimas, transporto priemonės
-            elektros sistemos komponentai.
-          </p>
-        </div>
-
-        <div class="category-container flex-box-column">
-          <i class="fa-solid fa-wrench"></i>
-          <h3>Kėbulo ir remonto medžiagos</h3>
-          <p>
-            automobilio išorės priežiūros ir remonto darbų priemonės,
-            reikalingos įbrėžimams, įlenkimams ar korozijai pašalinti.
-          </p>
-        </div>
-
-        <div class="category-container flex-box-column">
-          <i class="fa-solid fa-oil-can"></i>
-          <h3>Tepalai ir filtrai</h3>
-          <p>
-            Tepalo, kuro, oro, salono filtrai bei įvairūs tepalai skirtingiems
-            poreikiams (variklio, grandinių, guolių ir kiti).
-          </p>
-        </div>
-
-        <div class="category-container flex-box-column">
-          <i class="fa-solid fa-spray-can"></i>
-          <h3>Autokosmetika ir kvapai</h3>
-          <p>
-            Salono ir kėbulo kosmetika bei kvapai, kurie suteiks jūsų
-            automobiliui gaivų kvapą ir puikią išvaizdą.
-          </p>
-        </div>
-
-        <div class="category-container flex-box-column">
-          <i class="fa-solid fa-chair"></i>
-          <h3>Salono aksesuarai</h3>
-          <p>
-            sėdynių užvalkalai, kilimėliai ir kiti aksesuarai, kurie suteiks
-            jūsų transporto priemonei unikalią išvaizdą.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="social-activity-section flex-box-column">
-      <h1>VISUOMENINĖ VEIKLA</h1>
-      <div class="activity-container">
-        <div class="flex-container">
-          <div class="img-container">
-            <img
-              src="https://i.ytimg.com/vi/JGTxLIO33VU/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGEMgUShlMA8=&rs=AOn4CLAibbPxeA-5R8mDnzHYNRUno_Lmrwhttps://i.ytimg.com/vi/JGTxLIO33VU/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGEMgUShlMA8=&rs=AOn4CLAibbPxeA-5R8mDnzHYNRUno_Lmrw"
-              alt=""
-            />
-            <div class="photo-filter"></div>
+        <div class="phone-numbers flex-column-align-left">
+          <i class="fa-regular fa-address-book"></i>
+          <div>
+            <i class="fa-solid fa-phone"></i>
+            <h3>Parduotuvės tel. NR:</h3>
+            <a href="tel:+370 389 62279"> +370 389 62279 </a>
           </div>
-          <h3>Mokinių iniciatyvos "ŠGMA" finansinė parama</h3>
-          <p>
-            Autodalių parduotuvė „Autena“ didžiuojasi būdama ilgamečiu Šapokos
-            gimnazijos muzikinių apdovanojimų – ŠGMA – rėmėja. Šis kasmetinis
-            renginys suteikia unikalią platformą talentingiems gimnazijos
-            mokiniams pasirodyti, įvertinti jų muzikinius sugebėjimus ir skatina
-            kūrybiškumo ugdymą.
-          </p>
-        </div>
-        <div class="flex-container">
-          <div class="img-container">
-            <img src="/media/rally.jpg" alt="" />
-            <div class="photo-filter"></div>
+          <div>
+            <i class="fa-solid fa-phone"></i>
+            <h3>Direktorės tel NR:</h3>
+            <a href="tel:+37060045989">+37060045989</a>
           </div>
-          <h3>SAMSONO RALIS</h3>
-          <p>
-            Autodalių parduotuvė „Autena“ didžiuojasi galėdama prisidėti prie
-            automobilių sporto ir būti „Samsonas“ ralio lenktynininko finansine
-            rėmėja. Šis Utenoje vykstantis renginys suburia automobilių sporto
-            entuziastus, skatina vietinę bendruomenę palaikyti sportininkus ir
-            garsina mūsų regioną.
-          </p>
+          <div>
+            <i class="fa-solid fa-envelope"></i>
+            <h3>Elektroninis paštas:</h3>
+            <a
+              href="mailto:uabautena@gmail.com?subject=Klausimas&body=I%20would%20like%20more%20information."
+            >
+              uabautena@gmail.com</a
+            >
+          </div>
+        </div>
+        <div class="address flex-column-align-left">
+          <i class="fa-solid fa-location-dot"></i>
+          <h3>Fizinis adresas:</h3>
+          <a
+            href="https://www.google.lt/maps/place/UAB+AUTENA/@55.4992494,25.6044144,17z/data=!4m14!1m7!3m6!1s0x46dd57e7a8e6f7e3:0x44c2d68752506931!2sUAB+AUTENA!8m2!3d55.4992464!4d25.6069893!16s%2Fg%2F1q5bv140s!3m5!1s0x46dd57e7a8e6f7e3:0x44c2d68752506931!8m2!3d55.4992464!4d25.6069893!16s%2Fg%2F1q5bv140s?entry=ttu&g_ep=EgoyMDI0MTAyNy4wIKXMDSoASAFQAw%3D%3D"
+            >J. Basanavičiaus g. 75, <br />Utenos r. sav. 28240</a
+          >
         </div>
       </div>
+      <div class="secondary-info-container flex-column-center">
+        <div class="time">
+          <i class="fa-solid fa-business-time"></i>
+          <h3>DARBO LAIKAS:</h3>
+          <div class="container">
+            <div class="atributes">
+              <p>I - V:</p>
+              <p>VI:</p>
+              <p>VII:</p>
+            </div>
+            <div class="hours">
+              <p>9:00 - 17:00</p>
+              <p>9:00 - 15:00</p>
+              <p>nedirbame</p>
+            </div>
+          </div>
+        </div>
+        <div class="other">
+          <i class="fa-solid fa-circle-info"></i>
+          <h3>Kita informacija</h3>
+          <ul>
+            <li>Įmonės kodas: 303035575</li>
+            <li>Atsiskaitomoji sąskaita: LT364010041700784930</li>
+            <li>PVM mokėtojo kodas: LT100007636717</li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <section class="section-map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2259.901055727505!2d25.60441437716955!3d55.49924941149168!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46dd57e7a8e6f7e3%3A0x44c2d68752506931!2sUAB%20AUTENA!5e0!3m2!1sen!2slt!4v1733147046415!5m2!1sen!2slt"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
     </section>
 
-    <section class="feedback-section">
+    <section class="feedback-section section-wp">
       <h1>MUMS SVARBI JŪSŲ NUOMONĖ!</h1>
-      <p>
+      <p class="m-line-height">
         Jūsų nuomonė mums svarbi – ji padeda tobulinti paslaugas ir geriau
         atitikti jūsų poreikius. Jei turite klausimų ar pasiūlymų, užpildykite
         formą, ir mes pasistengsime atsakyti kuo greičiau.
@@ -215,8 +173,8 @@
         <button type="submit">SIŲSTI</button>
       </form>
     </section>
-
-    <footer>
+    <!-- FOOTER --------------------------------------------- -->
+    <footer class="section-wp">
       <div class="social-links-container">
         <ul class="social-links">
           <li>
@@ -230,7 +188,7 @@
         </ul>
       </div>
       <div class="pages">
-        <ul class="footer-section-links">
+        <ul class="footer-section-links flex-column-center">
           <li><a href="#">Pagrindinis</a></li>
           <li><a href="#">Apie mus</a></li>
           <li><a href="#">Akcijos</a></li>
