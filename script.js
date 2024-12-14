@@ -1,17 +1,19 @@
-// const hamburgerMenuIcon = document.querySelector(".hamburger-icon");
-// const mobileMenu = document.querySelector(".section-links");
+const hamburgerMenuIcon = document.querySelector(".hamburger-icon");
+const mobileMenu = document.querySelector(".section-links");
 
-// hamburgerMenuIcon.addEventListener("click", function () {
-//   mobileMenu.classList.toggle("hide-element");
-//   hamburgerMenuIcon.classList.toggle("fa-bars");
-//   hamburgerMenuIcon.classList.toggle("fa-xmark");
-// });
+function toggleHamburgerMenu() {
+  mobileMenu.classList.toggle("hide-element");
+  hamburgerMenuIcon.classList.toggle("fa-bars");
+  hamburgerMenuIcon.classList.toggle("fa-xmark");
+}
+
+hamburgerMenuIcon.addEventListener("click", toggleHamburgerMenu);
 
 // Selectors
 const navMain = document.querySelector("#nav-main");
 const navAboutUs = document.querySelector("#nav-about-us");
 const navContacts = document.querySelector("#nav-contacts");
-const navCtaMain = document.querySelector("#cta-button");
+const navCtaMain = document.querySelector("#cta-button-main");
 const footerMain = document.querySelector("#footer-main");
 const footerAboutUs = document.querySelector("#footer-about-us");
 const footerContacts = document.querySelector("#footer-contacts");
@@ -39,6 +41,13 @@ function loadHTMLIntoPlaceholder(filePath) {
     .catch((error) => {
       console.error("Error loading HTML:", error);
     });
+
+  if (hamburgerMenuIcon.style.display !== "none") toggleHamburgerMenu();
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Enables smooth scrolling
+  });
 }
 
 // Prevent default action for all `href="#"` links
@@ -49,8 +58,22 @@ document.querySelectorAll('a[href="#"]').forEach((link) => {
   });
 });
 
-loadHTMLIntoPlaceholder("landing.html");
-// loadHTMLIntoPlaceholder("contacts.html");
+// loadHTMLIntoPlaceholder("landing.html");
+loadHTMLIntoPlaceholder("contacts.html");
+
+// NAV EVENT LISTENER FOR TESTING
+document.addEventListener("click", (e) => {
+  if (
+    e.target.id === "nav-contacts" ||
+    e.target.id === "cta-button-main" ||
+    e.target.id === "footer-contacts"
+  )
+    loadHTMLIntoPlaceholder("contacts.html");
+  if (e.target.id === "nav-main" || e.target.id === "footer-main")
+    loadHTMLIntoPlaceholder("landing.html");
+  if (e.target.id === "nav-about-us" || e.target.id === "footer-about-us")
+    loadHTMLIntoPlaceholder("about-us.html");
+});
 
 // function loadHTMLAfterHeader(filePath) {
 //   fetch(filePath)
@@ -82,11 +105,11 @@ loadHTMLIntoPlaceholder("landing.html");
 //     });
 // }
 
-// document.querySelectorAll('a[href="#"]').forEach((link) => {
-//   link.addEventListener("click", (event) => {
-//     event.preventDefault(); // Prevent the default action (navigation)
-//   });
-// });
+document.querySelectorAll('a[href="#"]').forEach((link) => {
+  link.addEventListener("click", (e) => {
+    e.preventDefault(); // Prevent the default action (navigation)
+  });
+});
 
 // loadHTMLAfterHeader("landing.html");
 // loadHTMLAfterHeader("contacts.html");
