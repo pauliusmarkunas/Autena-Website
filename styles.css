@@ -84,6 +84,7 @@
 html {
   font-size: 62.5%;
   color: var(--fontColor);
+  scroll-behavior: smooth;
 }
 
 h1,
@@ -150,7 +151,7 @@ p {
 
 /* OTHER */
 .section-wp {
-  padding: 6rem 3rem;
+  padding: 6rem 6rem;
 }
 .m-line-height {
   line-height: 1.5;
@@ -249,12 +250,14 @@ header .hamburger-icon {
   width: 46rem;
   color: white;
   letter-spacing: 5px;
+  font-weight: 600;
 }
 
 .hero-section > p {
+  font-size: 2.4rem;
   text-align: center;
   color: white;
-  width: 37rem;
+  width: 40rem;
 }
 
 .hero-section > button {
@@ -295,7 +298,7 @@ header .hamburger-icon {
 }
 
 .about-us-section .flex-container h2 {
-  font-size: var(--lText);
+  font-size: var(--xlText);
   letter-spacing: 5px;
   font-weight: 500;
   margin-top: 4.2rem;
@@ -303,15 +306,19 @@ header .hamburger-icon {
 }
 
 .about-us-section .flex-container p {
+  line-height: 2;
+  font-size: 2.4rem;
   text-align: justify;
+  margin-top: 2.4rem;
 }
 
 .about-us-section .flex-container a {
+  font-size: 2.4rem;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--primary);
   font-family: var(--bodyFont);
-  font-size: var(--mText);
+  margin-top: 3rem;
 }
 
 /* OUR PRODUCTS SECTION */
@@ -326,13 +333,12 @@ header .hamburger-icon {
 .our-products-section > .grid-container {
   display: grid;
   justify-items: center;
-  align-items: center;
+  align-items: stretch;
   grid-template-columns: 1fr 1fr;
   column-gap: 4.2rem;
   row-gap: 6rem;
 }
 
-/* perdaryti į gridą, kad lengviau būtų desktop daryt */
 .our-products-section .category-container {
   justify-content: start;
   gap: 1.2rem;
@@ -354,7 +360,8 @@ header .hamburger-icon {
 }
 
 .category-container p {
-  text-align: center;
+  font-size: 1.2rem;
+  text-align: justify;
 }
 
 /* SOCIAL ACTIVITY SECTION */
@@ -706,17 +713,25 @@ footer .copyright {
   }
 
   .about-us-section .flex-container {
+    width: 100%;
     flex-direction: row;
     gap: 3rem;
   }
 
+  .about-us-section .img-container {
+    flex: 1;
+  }
+
   .about-us-section img {
     position: relative;
-    max-width: 37rem;
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    object-position: 85%;
   }
 
   .about-us-section .text-container {
-    max-width: 41rem;
+    flex: 1;
   }
 
   .about-us-section .img-border::after {
@@ -734,6 +749,10 @@ footer .copyright {
     margin-top: 0;
   }
 
+  .about-us-section .text-container p,
+  .about-us-section .text-container a {
+    font-size: 1.6rem;
+  }
   /* SOCIAL ACTIVITY */
   .activity-container {
     flex-direction: row;
@@ -744,6 +763,17 @@ footer .copyright {
   /* PRODUCTS */
   .our-products-section .grid-container {
     grid-template-columns: repeat(3, 1fr);
+  }
+  /* ABOUT US */
+  .about-us-section img {
+    aspect-ratio: initial;
+    object-fit: initial;
+    object-position: initial;
+  }
+
+  .about-us-section .text-container p,
+  .about-us-section .text-container a {
+    font-size: 2.4rem;
   }
 }
 
@@ -781,15 +811,17 @@ change footer style, structure
 .section-contacts {
   background-color: var(--yellow-darker);
   color: white;
+  grid-template-columns: 1fr;
+  row-gap: 3rem;
   i {
     font-size: 4rem;
     color: var(--primary);
     background-color: rgba(255, 255, 255, 0.504);
-    width: 50px;
+    width: 6rem;
     aspect-ratio: 1/1;
     border-radius: 12px;
     text-align: center;
-    line-height: 50px;
+    line-height: 6rem;
     margin-bottom: 1.8rem;
   }
   h3 {
@@ -814,14 +846,10 @@ change footer style, structure
   }
 }
 
-.primary-info-container {
-  gap: 3rem;
+.phone-numbers,
+.address {
+  gap: 1.2rem;
   width: 100%;
-  .phone-numbers,
-  .address {
-    gap: 1.2rem;
-    width: 100%;
-  }
 }
 
 .section-contacts .phone-numbers,
@@ -860,50 +888,45 @@ change footer style, structure
 }
 
 /* secondary info */
-.secondary-info-container {
+.time {
   width: 100%;
-  margin-top: 3rem;
-  .time {
+  background-color: rgba(255, 255, 255, 0.234);
+  padding: 2.4rem;
+  border-radius: 10px;
+  color: var(--primary-shade40);
+  > h3 {
+    display: block;
+  }
+  font-family: var(--bodyFont);
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.234);
-    padding: 2.4rem;
-    border-radius: 10px;
-    color: var(--primary-shade40);
-    > h3 {
-      display: block;
-    }
-    font-family: var(--bodyFont);
-    .container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      width: 100%;
-      .hours p {
-        text-align: end;
-      }
+    .hours p {
+      text-align: end;
     }
   }
+}
 
-  .other {
-    margin-top: 3rem;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.234);
-    padding: 2.4rem;
-    border-radius: 10px;
+.other {
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.234);
+  padding: 2.4rem;
+  border-radius: 10px;
+  color: var(--primary-shade40);
+  font-family: var(--bodyFont);
+  > h3 {
+    display: block;
+  }
+  ul {
+    list-style: none;
+  }
+
+  li {
+    font-size: 3rem;
     color: var(--primary-shade40);
-    font-family: var(--bodyFont);
-    > h3 {
-      display: block;
-    }
-    ul {
-      list-style: none;
-    }
-
-    li {
-      font-size: 3rem;
-      color: var(--primary-shade40);
-      font-weight: 600;
-      margin-top: 2.4rem;
-    }
+    font-weight: 600;
+    margin-top: 2.4rem;
   }
 }
 
@@ -913,13 +936,54 @@ change footer style, structure
 
 /* MEADIA QUERIES*/
 @media screen AND (min-width: 900px) {
-  .primary-info-container,
-  .secondary-info-container {
-    flex-direction: row;
+  html {
+    font-size: 45%;
+  }
+  .section-contacts {
+    grid-template-columns: repeat(3, 1fr);
     align-items: stretch;
-    gap: 3rem;
+    column-gap: 6rem;
+  }
+  .section-contacts .time {
+    grid-column: 2/3;
+  }
+}
+
+@media screen AND (min-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
+  .section-contacts {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.2rem;
+    .phone-numbers,
+    .address,
+    .time,
     .other {
-      margin: 0;
+      h3,
+      p,
+      div,
+      a,
+      li {
+        font-size: var(--mText);
+      }
+    }
+    .contact-us {
+      grid-column: 1 /-1;
+      width: 60rem;
+      justify-self: center;
+    }
+    .time {
+      grid-column: 3/4;
     }
   }
 }
+
+@media screen AND (min-width: 1600px) {
+  html {
+    font-size: 90%;
+  }
+}
+/* continue with grid layout */
+
+/* fix ICONS backgrounds */

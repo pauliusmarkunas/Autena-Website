@@ -1,13 +1,16 @@
-<section class="hero-section flex-column-center">
+<section id="hero-section" class="hero-section flex-column-center">
   <div class="img-cover"></div>
   <h1>PASIRŪPINK SAVO AUTOMOBILIU!</h1>
   <p class="l-line-height">
     Parduotuvėje Autena rasite visko ko reikia jūsų <b>automobiliui</b>, jo
     priežiūrai ir dar daugiau!
   </p>
-  <button>Susisiekite</button>
+  <button id="cta-button-main">Susisiekite</button>
 </section>
-<section class="about-us-section flex-column-center section-wp">
+<section
+  id="about-us-section"
+  class="about-us-section flex-column-center section-wp"
+>
   <h1>APIE <b>MUS</b></h1>
   <div class="flex-container flex-column-center">
     <div class="img-container">
@@ -21,10 +24,9 @@
     <div class="text-container">
       <h2>SUSIPAŽINKIME</h2>
       <p class="m-line-height">
-        Daugiau nei <b>10metų</b> padedame jūsų automobiliams.
-      </p>
-      <p class="m-line-height">
-        Esame įsikūrę Utenos miesto centre <b>J. Basanavičiaus g. 75</b>
+        Daugiau nei <b>10metų</b> padedame jūsų automobiliams. Esame įsikūrę
+        Utenos miesto centre
+        <b>J. Basanavičiaus g. 75</b>
         Skirtingai nuo didelių didmenininkų, mes galime taikyti lanksčią prekių
         kainodarą. Mūsų darbuotojai visada linkę jums padėti, išanalizavę
         problemą, pateikti geriausią sprendimą paremtą patirtimi.
@@ -92,7 +94,10 @@
     </div>
   </div>
 </section>
-<section class="social-activity-section section-wp flex-column-center">
+<section
+  id="social-activity-section"
+  class="social-activity-section section-wp flex-column-center"
+>
   <h1>VISUOMENINĖ VEIKLA</h1>
   <div class="activity-container">
     <div class="flex-container">
@@ -130,17 +135,17 @@
   </div>
 </section>
 
-<section class="feedback-section section-wp">
+<section id="feedback-section" class="feedback-section section-wp">
   <h1>MUMS SVARBI JŪSŲ NUOMONĖ!</h1>
   <p class="m-line-height">
     Jūsų nuomonė mums svarbi – ji padeda tobulinti paslaugas ir geriau atitikti
     jūsų poreikius. Jei turite klausimų ar pasiūlymų, užpildykite formą, ir mes
     pasistengsime atsakyti kuo greičiau.
   </p>
-  <form action="/submit-feedback" method="POST">
+  <!-- TESTING -->
+  <form action="https://formsubmit.co/yourEmailAddress" method="POST">
     <label for="name">Vardas:</label>
     <input type="text" id="name" name="name" required placeholder="Vardenis" />
-
     <label for="email">El. paštas:</label>
     <input
       type="email"
@@ -166,8 +171,16 @@
         id="subscribe"
         name="subscribe"
       />
-      Sutinku gauti pranešimus el. paštu
+      Sutinku gauti rinkodaros pranešimus el. paštu
     </label>
+    <!-- ADDITIONAL -->
+    <input type="hidden" name="_subject" value="message from landing page" />
+    <input type="text" name="_honey" style="display: none" />
+    <input
+      type="hidden"
+      name="_autoresponse"
+      value="Ačiū už jūsų žinutę, susisieksime su jumis, kaip įmanoma greičiau!"
+    />
     <button type="submit">SIŲSTI</button>
   </form>
 </section>
